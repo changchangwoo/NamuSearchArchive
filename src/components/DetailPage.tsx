@@ -2,7 +2,7 @@ import React from 'react'
 
 const DetailPage = () => {
   return (
-    <div>DetailPage</div>
+    <div>DetailPage 프리텐다드 폰트</div>
   )
 }
 

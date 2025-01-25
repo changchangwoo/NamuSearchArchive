@@ -1,9 +1,11 @@
-import React from 'react'
-
 const MainPage = () => {
   return (
-    <div>MainPage</div>
-  )
-}
+    <>
+      <button className="">
+      <div>Main 프리텐다드 폰트</div>
+      </button>
+    </>
+  );
+};
 
-export default MainPage
+export default MainPage;
