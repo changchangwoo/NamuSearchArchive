@@ -32,12 +32,12 @@ const Tab = () => {
   };
 
   return (
-    <div className="flex gap-5 font-semibold text-xl ">
+    <div className="flex gap-5 font-semibold text-2xl ">
       {TabData.map((element) => (
         <div
           key={element.id}
           onClick={() => handleClick(element.id)} 
-          className={`cursor-pointer ${activeTab === element.id ? 'text-black' : 'text-[#959595]'}`}>
+          className={`cursor-pointer ${activeTab === element.id ? 'text-black' : 'text-deep-grey'}`}>
           {element.title}
         </div>
       ))}

@@ -47,9 +47,9 @@ const Board = () => {
   return (
     <div className="w-full h-auto bg-white rounded-xl my-5 p-3">
       {tempData.map((element, index) => (
-        <div key={index} className="flex flex-col my-2 hover:bg-[#D9D9D9]">
+        <div key={index} className="flex flex-col my-2 hover:bg-grey">
           <div className="flex gap-2">
-            <div className="w-8 h-8 rounded-md bg-[#F5F6F8] text-lg text-black font-bold flex items-center justify-center">
+            <div className="w-8 h-8 rounded-md bg-grey text-lg text-black font-bold flex items-center justify-center">
               {element.rank}
             </div>
             <div className="text-black font-semibold text-xl ">
