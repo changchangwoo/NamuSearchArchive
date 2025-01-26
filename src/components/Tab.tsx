@@ -32,6 +32,7 @@ const Tab = () => {
   };
 
   return (
+    <>
     <div className="flex gap-5 font-semibold text-2xl ">
       {TabData.map((element) => (
         <div
@@ -42,6 +43,7 @@ const Tab = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 

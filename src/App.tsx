@@ -9,7 +9,7 @@ const App: React.FC = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Mainpage />} />
-          <Route path="/detail" element={<Detailpage />} />
+          <Route path="/details/:id" element={<Detailpage />} />
         </Routes>
       </Layout>
     </Router>
