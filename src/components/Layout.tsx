@@ -10,8 +10,8 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="mx-auto max-w-xl bg-white-grey h-screen border-l-1 border-r-1 border-white-grey">
       <Header />
-      <Search />
       <div className="px-5">
+        <Search />
         <main>{children}</main>
       </div>
     </div>
