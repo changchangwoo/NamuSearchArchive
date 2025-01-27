@@ -1,4 +1,5 @@
 import { FaCaretUp,FaCaretDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 interface RankItemProps {
   title: string;
@@ -8,6 +9,7 @@ interface RankItemProps {
 
 const RankItem = ({ title, rank, status }: RankItemProps) => {
   return (
+    <Link to={`/details/${title}`}>
     <div
       key={title}
       className="flex flex-col p-2 rounded-md border border-transparent hover:bg-light-grey group cursor-pointer"
@@ -39,6 +41,7 @@ const RankItem = ({ title, rank, status }: RankItemProps) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 

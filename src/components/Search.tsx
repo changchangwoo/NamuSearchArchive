@@ -1,9 +1,8 @@
-import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 const Search = () => {
   return (
-    <div className="my-5 flex justify-center w-full h-12 rounded-3xl bg-white border-1 border-grey px-3">
+    <div className="mb-5 flex justify-center w-full h-12 rounded-3xl bg-white border-1 border-grey px-3">
       <input
         className="flex-grow h-full rounded-l-3xl bg-white text-base text-center text-deep-grey outline-none px-3"
         placeholder="검색어를 입력하세요"

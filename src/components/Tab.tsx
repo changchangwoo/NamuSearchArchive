@@ -1,7 +1,6 @@
 
 
 import { useState } from "react";
-import { LuEggFried } from "react-icons/lu";
 
   type TabItem = {
     title: string;
@@ -58,8 +57,6 @@ import { LuEggFried } from "react-icons/lu";
               }
             }
             ></div>
-          
-          
           </div>
         </div>
       </>
