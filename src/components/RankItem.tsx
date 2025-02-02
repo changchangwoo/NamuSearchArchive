@@ -12,10 +12,10 @@ const RankItem = ({ title, rank, status }: RankItemProps) => {
     <Link to={`/details/${title}`}>
     <div
       key={title}
-      className="flex flex-col p-2 rounded-md border border-transparent hover:bg-light-grey group cursor-pointer"
+      className="flex flex-col p-2 rounded-md border border-transparent hover:bg-light-grey group cursor-pointer duration-300 "
     >
       <div className="flex gap-5">
-        <div className="w-9 h-9 rounded-md bg-light-grey text-lg text-light-black font-bold flex items-center justify-center group-hover:bg-hover-light-grey">
+        <div className="w-9 h-9 rounded-md bg-light-grey text-lg text-light-black font-bold flex items-center justify-center group-hover:bg-hover-light-grey duration-300">
           {rank}
         </div>
         <div className="flex w-full justify-between">

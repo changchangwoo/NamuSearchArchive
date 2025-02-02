@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface SourceCardProps {
   data: {
     title: string;
@@ -9,6 +11,8 @@ interface SourceCardProps {
 }
 
 const SourceCard = ({ data }: SourceCardProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
   return (
     <div className="w-full h-35 bg-white rounded-lg border-1 border-grey flex p-5 gap-5 cursor-pointer hover:brightness-90 transition duration-300">
       <div className=" w-25 h-full bg-grey rounded-lg"></div>
@@ -17,7 +21,7 @@ const SourceCard = ({ data }: SourceCardProps) => {
           {data.title}
         </div>
         <div className="text-md text-deep-grey">{data.date}</div>
-        <div className="relative font-bold text-base text-light-black mt-5">
+        <div className="relative font-bold text-basse text-light-black mt-5">
           {data.source}
         </div>
       </div>

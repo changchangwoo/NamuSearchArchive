@@ -1,4 +1,3 @@
-import React from "react";
 import RankItem from "./RankItem";
 
 type RankStatus = "up" | "down" | "same" | "new";

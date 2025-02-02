@@ -66,7 +66,7 @@ const Detailpage = () => {
     ">
     {
       HistoryData.map((data, idx) => 
-        <HistoryCard key={data.id} data={data} idx={idx}/>
+        <HistoryCard key={data.id} data={data} idx={idx} state={idx+1 === HistoryData.length ? true : false}/>
       )
     }
     <div className="text-2xl font-bold text-black">관련 자료</div>
