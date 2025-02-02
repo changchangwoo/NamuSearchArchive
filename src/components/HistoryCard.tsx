@@ -37,21 +37,24 @@ const HistoryCard = ({ data, idx, state }: HistoryCardProps) => {
         </div>
         <div className="flex flex-col gap-0">
           <div className="text-xl font-bold text-black">{data.date}</div>
-          <div className="text-sm font-medium text-deep-grey">{data.time}</div>
+          <div className="text-sm font-medium text-deep-grey relative top-[-5px]">{data.time}</div>
         </div>
       </div>
 
-      {/* height 애니메이션 적용 부분 */}
       <div
         ref={contentRef}
-        className="overflow-hidden transition-[height] duration-300 ease-in-out"
+        className="overflow-hidden duration-300 ease-in-out"
         style={{ height }}
       >
+        {data.imageURL ?
         <img
           src={data.imageURL}
-          className="w-full h-46 object-cover rounded-lg"
+          className="w-full h-50 object-cover rounded-lg mt-2"
           alt="이미지"
         />
+          :
+          <div className="w-full h-50 bg-grey rounded-lg mt-2"></div>
+      }
         <div className="mt-5 text-light-black">{data.description}</div>
       </div>
     </div>

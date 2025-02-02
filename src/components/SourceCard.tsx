@@ -1,31 +1,33 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface SourceCardProps {
   data: {
     title: string;
     imageURL: string;
     source: string;
+    sourceURL: string;
     date: string;
     id: number;
   };
 }
 
 const SourceCard = ({ data }: SourceCardProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
   
   return (
-    <div className="w-full h-35 bg-white rounded-lg border-1 border-grey flex p-5 gap-5 cursor-pointer hover:brightness-90 transition duration-300">
+    <>
+    <Link to={data.sourceURL} className="w-full h-35 bg-white rounded-lg border-1 border-grey flex p-5 gap-5 cursor-pointer hover:brightness-90 transition duration-300">
       <div className=" w-25 h-full bg-grey rounded-lg"></div>
       <div className=" flex flex-col h-full">
-        <div className="w-85 text-xl font-bold text-black truncate">
+        <div className="w-85 text-lg font-bold text-black truncate">
           {data.title}
         </div>
-        <div className="text-md text-deep-grey">{data.date}</div>
-        <div className="relative font-bold text-basse text-light-black mt-5">
+        <div className="text-sm text-deep-grey">{data.date}</div>
+        <div className="relative font-bold text-xs text-light-black mt-7">
           {data.source}
         </div>
       </div>
-    </div>
+    </Link>
+    </>
   );
 };
 

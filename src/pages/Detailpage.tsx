@@ -37,6 +37,7 @@ const sourceData: {
   title: string,
   imageURL: string,
   source: string,
+  sourceURL : string,
   date: string,
   id: number,
 }[] = [
@@ -45,6 +46,7 @@ const sourceData: {
     imageURL: "",
     source: "연합뉴스",
     date: "2025-01-12",
+    sourceURL : "https://news.naver.com/main/read.naver?mode=LSD&mid=sec&sid1=106&oid=001&aid=0013123123",
     id: 1,
   },
   {
@@ -52,6 +54,7 @@ const sourceData: {
     imageURL: "",
     source: "네이버뉴스",
     date: "2025-01-12",
+    sourceURL : "https://news.naver.com/main/read.naver?mode=LSD&mid=sec&sid1=106&oid=001&aid=0013123123",
     id: 2
   },
 ]
@@ -69,7 +72,7 @@ const Detailpage = () => {
         <HistoryCard key={data.id} data={data} idx={idx} state={idx+1 === HistoryData.length ? true : false}/>
       )
     }
-    <div className="text-2xl font-bold text-black">관련 자료</div>
+    <div className="text-xl font-bold text-black">관련 자료</div>
     {
       sourceData.map((data) => 
         <SourceCard key={data.id} data={data}/>
