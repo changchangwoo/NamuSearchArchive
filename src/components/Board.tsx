@@ -1,63 +1,69 @@
+import { IRankData } from "../models/data.model";
 import RankItem from "./RankItem";
 
-type RankStatus = "up" | "down" | "same" | "new";
 
-type RankData = {
-  title: string;
-  rank: number;
-  status: RankStatus;
-};
 
-const tempData: RankData[] = [
+
+const tempData: IRankData[] = [
   {
     title: "이순재",
     rank: 1,
-    status: "up"
+    status: "up",
+    id : 1,
   },
   {
     title: "나도형",
     rank: 2,
-    status: "down"
+    status: "down",
+    id : 2,
   },
   {
     title: "송혜교",
     rank: 3,
-    status: "same"
+    status: "same",
+    id : 3,
   },
   {
     title: "신종철",
     rank: 4,
-    status: "new"
+    status: "new",
+    id : 4,
   },
   {
     title: "기가차드",
     rank: 5,
-    status: "up"
+    status: "up",
+    id : 5,
   },
   {
     title: "허은아",
     rank: 6,
-    status: "down"
+    status: "down",
+    id : 6,
   },
   {
     title: "LA산불",
     rank: 7,
-    status: "same"
+    status: "same",
+    id : 7,
   },
   {
     title: "나훈아",
     rank: 8,
-    status: "new"
+    status: "new",
+    id : 8,
   },
   {
     title: "랄랄",
     rank: 9,
-    status: "up"
+    status: "up",
+    id : 9,
   },
   {
     title: "이렐리아",
     rank: 10,
-    status: "down"
+    status: "down",
+    id : 10,
   },
 ];
 
@@ -67,10 +73,7 @@ const Board = () => {
       <div className="w-full h-auto bg-white rounded-2xl my-5 p-3 border-1 border-grey">
         {tempData.map((element) => (
           <RankItem
-            key={element.title}
-            title={element.title}
-            rank={element.rank}
-            status={element.status}
+            data= {element}
           />
         ))}
       </div>

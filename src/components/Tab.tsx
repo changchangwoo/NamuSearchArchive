@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-  type TabItem = {
+  interface TabItem {
     title: string;
     id: number;
   };

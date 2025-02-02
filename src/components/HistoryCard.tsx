@@ -1,12 +1,8 @@
 import { useState, useRef, useEffect } from "react";
+import { IHistoryData } from "../models/data.model";
 
 interface HistoryCardProps {
-  data: {
-    date: string;
-    time: string;
-    imageURL: string;
-    description: string;
-  };
+  data: IHistoryData;
   idx: number;
   state: boolean;
 }

@@ -1,14 +1,8 @@
 import { Link } from "react-router-dom";
+import { ISourceData } from "../models/data.model";
 
 interface SourceCardProps {
-  data: {
-    title: string;
-    imageURL: string;
-    source: string;
-    sourceURL: string;
-    date: string;
-    id: number;
-  };
+  data: ISourceData;
 }
 
 const SourceCard = ({ data }: SourceCardProps) => {

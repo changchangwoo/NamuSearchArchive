@@ -1,14 +1,9 @@
 import HistoryCard from "../components/HistoryCard"
 import SourceCard from "../components/SourceCard"
+import { IHistoryData, ISourceData } from "../models/data.model"
 
 
-const HistoryData : {
-  date : string,
-  time : string,
-  imageURL : string,
-  description : string,
-  id : number,
-}[] = [
+const HistoryData : IHistoryData[] = [
   {
     id : 1,
     date : "2025-01-12",
@@ -33,14 +28,7 @@ const HistoryData : {
 ]
 
 
-const sourceData: {
-  title: string,
-  imageURL: string,
-  source: string,
-  sourceURL : string,
-  date: string,
-  id: number,
-}[] = [
+const sourceData: ISourceData[] = [
   {
     title: "“오래 살다보니 이런일도” 이순재 감탄의 연속",
     imageURL: "",
