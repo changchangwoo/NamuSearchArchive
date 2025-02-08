@@ -73,6 +73,7 @@ const Board = () => {
       <div className="w-full h-auto bg-white rounded-2xl my-5 p-3 border-1 border-grey">
         {tempData.map((element) => (
           <RankItem
+            key={element.id}
             data= {element}
           />
         ))}

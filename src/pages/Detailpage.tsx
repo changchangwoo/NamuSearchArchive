@@ -1,6 +1,7 @@
+import DetailHeader from "../components/DetailHeader"
 import HistoryCard from "../components/HistoryCard"
 import SourceCard from "../components/SourceCard"
-import { IHistoryData, ISourceData } from "../models/data.model"
+import { IDetailData, IHistoryData, ISourceData } from "../models/data.model"
 
 
 const HistoryData : IHistoryData[] = [
@@ -47,12 +48,20 @@ const sourceData: ISourceData[] = [
   },
 ]
 
+const detailData : IDetailData = {
+  title: "이순재",
+  status: "실시간 3위🔥",
+  firstListedData: "2025-01-12 16:35"
+
+}
+
+
 
 
 const Detailpage = () => {
   return (
     <>
-    <DetailHeader/>
+    <DetailHeader data={detailData}/>
     <div className="flex w-full h-auto flex-col gap-5 mt-5
     ">
     {
@@ -71,16 +80,5 @@ const Detailpage = () => {
   )
 }
 
-const DetailHeader = () => {
-  return (
-    <div className="w-full flex-col">
-      <div className="w-auto flex gap-2">
-        <div className="text-3xl font-bold">이순재</div>
-        <div className="font-bold text-sm text-light-black relative top-4">실시간 3위🔥</div>
-      </div>
-      <div className="mt-2 text-deep-grey font-light">최초 등재 : 2025-01-12 16:35 </div>
-    </div>
-  )
-}
 
 export default Detailpage
