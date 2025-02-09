@@ -5,6 +5,10 @@ export interface IHistoryData {
   time: string;
   imageURL: string;
   description: string;
+  sourceImageURL : string;
+  sourceTitle : string;
+  source: string;
+  sourceURL : string;
   id: number;
 }
 

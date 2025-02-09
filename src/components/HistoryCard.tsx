@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { IHistoryData } from "../models/data.model";
+import { MdDescription } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 interface HistoryCardProps {
   data: IHistoryData;
@@ -27,13 +29,15 @@ const HistoryCard = ({ data, idx, state }: HistoryCardProps) => {
       className="w-full h-auto border-grey bg-white rounded-xl flex-col p-5 border hover:brightness-90 transition duration-300 cursor-pointer"
       onClick={toggleExpand}
     >
-      <div className="flex gap-2">
+      <div className="flex gap-4">
         <div className="w-10 h-10 bg-primary rounded-lg font-bold flex justify-center items-center text-white text-2xl">
           {idx + 1}
         </div>
         <div className="flex flex-col gap-0">
           <div className="text-xl font-bold text-black">{data.date}</div>
-          <div className="text-sm font-medium text-deep-grey relative top-[-5px]">{data.time}</div>
+          <div className="text-sm font-medium text-deep-grey relative top-[-5px]">
+            {data.time}
+          </div>
         </div>
       </div>
 
@@ -42,16 +46,28 @@ const HistoryCard = ({ data, idx, state }: HistoryCardProps) => {
         className="overflow-hidden duration-300 ease-in-out"
         style={{ height }}
       >
-        {data.imageURL ?
-        <img
-          src={data.imageURL}
-          className="w-full h-50 object-cover rounded-lg mt-2"
-          alt="이미지"
-        />
-          :
+        {data.imageURL ? (
+          <img
+            src={data.imageURL}
+            className="w-full h-50 object-cover rounded-lg mt-2"
+            alt="이미지"
+          />
+        ) : (
           <div className="w-full h-50 bg-grey rounded-lg mt-2"></div>
-      }
-        <div className="mt-5 text-light-black">{data.description}</div>
+        )}
+        <div className="w-full my-5 text-light-black">{data.description}</div>
+        <div className="font-bold mb-2">참고 자료</div>
+        {/* 내부 출처 카드 */}
+        <Link to={data.sourceURL} 
+        className="duration-300 hover:brightness-90 w-full h-22 bg-white rounded-lg flex p-2 border pt-3 border-grey gap-5 internal-source-card">
+          <div className="w-25 h-full bg-grey rounded-md"></div>
+          <div className="w-full">
+            <div className="font-bold text-base">
+              {data.sourceTitle}
+            </div>
+            <div className="font-bold text-xs text-light-black mt-6">{data.source}</div>
+          </div>
+        </Link>
       </div>
     </div>
   );
