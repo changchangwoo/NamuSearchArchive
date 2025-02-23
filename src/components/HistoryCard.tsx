@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { IHistoryData } from "../models/data.model";
-import { MdDescription } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 interface HistoryCardProps {
@@ -59,7 +58,7 @@ const HistoryCard = ({ data, idx, state }: HistoryCardProps) => {
         <div className="font-bold mb-2">참고 자료</div>
         {/* 내부 출처 카드 */}
         <Link to={data.sourceURL} 
-        className="duration-300 hover:brightness-90 w-full h-22 bg-white rounded-lg flex p-2 border pt-3 border-grey gap-5 internal-source-card">
+        className="duration-300 hover:brightness-90 w-full h-25 bg-white rounded-lg flex p-3 border border-grey gap-5 internal-source-card">
           <div className="w-25 h-full bg-grey rounded-md"></div>
           <div className="w-full">
             <div className="font-bold text-base">
