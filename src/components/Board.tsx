@@ -4,6 +4,7 @@ import useGetCurRank from "../hooks/queries/useGetRank";
 
 const Board = () => {
   const { data: rankData, isLoading, error } = useGetCurRank();
+
   return (
     <>
       <div className="w-full h-auto bg-white rounded-2xl my-5 p-3 border-1 border-grey">
