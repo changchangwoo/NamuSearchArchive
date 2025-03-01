@@ -1,10 +1,11 @@
 import { IDetailData } from '../models/data.model'
 
 interface DetailHeaderProps {
-    data : IDetailData
+    data : IDetailData | undefined
 }
 
-const DetailHeader = ( {data} : DetailHeaderProps) => {
+const DetailHeader = ( {data} : DetailHeaderProps ) => {
+  if(!data) return null
     return (
         <div className="w-full flex-col">
           <div className="w-auto flex gap-2">
