@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { IHistoryData } from "../models/data.model";
 import { Link } from "react-router-dom";
+import { FaTree } from "react-icons/fa6";
 
 interface HistoryCardProps {
   data: IHistoryData;
@@ -45,26 +46,41 @@ const HistoryCard = ({ data, idx, state }: HistoryCardProps) => {
         className="overflow-hidden duration-300 ease-in-out"
         style={{ height }}
       >
-        {data.imageURL ? (
+        {/* {data.imageURL ? (
           <img
             src={data.imageURL}
             className="w-full h-50 object-cover rounded-lg mt-2"
             alt="이미지"
           />
-        ) : (
-          <div className="w-full h-50 bg-grey rounded-lg mt-2"></div>
-        )}
+        ) : ( */}
+        <div className="w-full h-50 bg-grey rounded-lg mt-2 flex justify-center items-center">
+          <FaTree className="w-8 h-8 text-deep-grey" />
+        </div>
+        {/* )} */}
         <div className="w-full my-5 text-light-black">{data.description}</div>
         <div className="font-bold mb-2">참고 자료</div>
         {/* 내부 출처 카드 */}
-        <Link to={data.sourceURL} 
-        className="duration-300 hover:brightness-90 w-full h-25 bg-white rounded-lg flex p-3 border border-grey gap-5 internal-source-card">
-          <div className="w-25 h-full bg-grey rounded-md"></div>
-          <div className="w-full">
-            <div className="font-bold text-base">
-              {data.sourceTitle}
+        <Link
+          to={data.sourceURL}
+          className="duration-300 hover:brightness-90 w-full h-25 bg-white rounded-lg flex p-3 border border-grey gap-5 internal-source-card"
+        >
+          {/* {data.sourceImageURL ? (
+            <img
+              src={data.sourceImageURL}
+              className="w-25 h-full object-cover rounded-md"
+              alt="이미지"
+            />
+          ) : ( */}
+            <div className="w-25 h-full bg-grey rounded-md flex justify-around items-center">
+              <FaTree className="w-5 h-5 text-deep-grey " />
             </div>
-            <div className="font-bold text-xs text-light-black mt-6">{data.source}</div>
+          {/* )} */}
+
+          <div className="w-full">
+            <div className="font-bold text-base">{data.sourceTitle}</div>
+            <div className="font-bold text-xs text-light-black mt-6">
+              {data.source}
+            </div>
           </div>
         </Link>
       </div>
