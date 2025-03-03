@@ -31,7 +31,6 @@ const Detailpage = () => {
               key={data.id}
               data={data}
               idx={idx}
-              state={idx + 1 === HistoryData.length ? true : false}
             />
           ))
         ) : (
