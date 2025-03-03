@@ -3,22 +3,16 @@ import { IHistoryData } from "../models/data.model";
 import { Link } from "react-router-dom";
 import { FaTree } from "react-icons/fa6";
 import {
-  MdExpandMore,
-  MdMinimize,
-  MdOutlineExpand,
   MdOutlineExpandLess,
-  MdOutlineExpandMore,
-  MdOutlineMinimize,
 } from "react-icons/md";
 
 interface HistoryCardProps {
   data: IHistoryData;
   idx: number;
-  state: boolean;
 }
 
-const HistoryCard = ({ data, idx, state }: HistoryCardProps) => {
-  const [isExpanded, setIsExpanded] = useState(state);
+const HistoryCard = ({ data, idx }: HistoryCardProps) => {
+  const [isExpanded, setIsExpanded] = useState(idx === 0 ? true : false);
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState("0px");
 
@@ -51,9 +45,9 @@ const HistoryCard = ({ data, idx, state }: HistoryCardProps) => {
         </div>
         <div className="flex-[0.1] flex justify-center items-center duration-300 transition">
           {isExpanded ? (
-            <MdOutlineExpandLess className="text-2xl flex relative top-[-5px] text-deep-grey" />
+            <MdOutlineExpandLess className="text-2xl flex relative top-[-5px] text-deep-grey duration-300 transition"  />
           ) : (
-            <MdOutlineExpandMore className="text-2xl flex relative top-[-5px] text-deep-grey " />
+            <MdOutlineExpandLess className="text-2xl flex relative top-[-5px] rotate-180 text-deep-grey duration-300 transition " />
           )}
         </div>
       </button>
@@ -96,17 +90,17 @@ const HistoryCard = ({ data, idx, state }: HistoryCardProps) => {
           to={data.sourceURL}
           className="duration-300 hover:brightness-90 w-full h-25 bg-white rounded-lg flex p-3 border border-grey gap-5 internal-source-card"
         >
-          {data.sourceImageURL ? (
+          {/* {data.sourceImageURL ? (
             <img
               src={data.sourceImageURL}
               className="w-25 h-full object-cover rounded-md"
               alt="이미지"
             />
-          ) : (
+          ) : ( */}
             <div className="w-25 h-full bg-grey rounded-md flex justify-around items-center">
               <FaTree className="w-5 h-5 text-deep-grey " />
             </div>
-          )}
+          {/* )} */}
 
           <div className="w-full">
             <div className="font-bold text-base">{data.sourceTitle}</div>

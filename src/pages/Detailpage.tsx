@@ -1,7 +1,6 @@
 import DetailHeader from "../components/DetailHeader";
 import HistoryCard from "../components/HistoryCard";
 import Loading from "../components/Loading";
-import SourceCard from "../components/SourceCard";
 import useGetDetail from "../hooks/queries/useGetDetail";
 import useGetHistoryCard from "../hooks/queries/useGetHisotryCard";
 
