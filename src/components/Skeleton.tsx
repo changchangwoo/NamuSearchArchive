@@ -16,7 +16,7 @@ export const CardSkeleton = () => {
   return (
     <div>
       {Array.from({ length: 3 }).map((_, index) => (
-        <div key={index} className="animate-pulse w-full h-22 bg-gray-200 mt-5 rounded-lg" />
+        <div key={index} className="animate-pulse w-full h-22 bg-deep-gray mt-5 rounded-lg" />
       ))}
     </div>
   );

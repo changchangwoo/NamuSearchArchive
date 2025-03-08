@@ -18,7 +18,7 @@ const Detailpage = () => {
     data: HistoryData,
     isLoading: isHistoryLoading,
     error: isHistoryError,
-    isFetching,
+    isFetchingNextPage,
     hasNextPage,
   } = useGetHistoryCard({ id: 1, page: 1, limit: CARDS_PER_PAGE });
   const observerRef = useRef<HTMLDivElement | null>(null);
@@ -69,7 +69,7 @@ const Detailpage = () => {
         )}
       </div>
       {
-        true ? (<CardSkeleton/>)
+        isFetchingNextPage ? (<CardSkeleton/>)
         :
         (
           <div
