@@ -11,10 +11,10 @@ const RankItem = ({ data }: RankItemProps) => {
     <Link to={`/details/${data.title}`}>
       <div
         key={data.title}
-        className="flex flex-col p-2 rounded-md border border-transparent hover:bg-light-grey group cursor-pointer duration-300 "
+        className="flex flex-col p-2 rounded-md border border-transparent hover:bg-light-gray group cursor-pointer duration-300 "
       >
         <div className="flex gap-5">
-          <div className="w-9 h-9 rounded-md bg-light-grey text-lg text-light-black font-bold flex items-center justify-center group-hover:bg-hover-light-grey duration-300">
+          <div className="w-9 h-9 rounded-md bg-light-gray text-lg text-light-black font-bold flex items-center justify-center group-hover:bg-hover-light-gray duration-300">
             {data.rank}
           </div>
           <div className="flex w-full justify-between">
@@ -23,7 +23,7 @@ const RankItem = ({ data }: RankItemProps) => {
             </div>
             <div className="flex justify-center items-center">
               {data.status === "new" && (
-                <span className="text-deep-grey text-sm">new</span>
+                <span className="text-deep-gray text-sm">new</span>
               )}
               {data.status === "up" && (
                 <div className="flex items-center text-primary">

@@ -15,7 +15,7 @@ const SourceCard = ({ data }: SourceCardProps) => {
         <div className="w-85 text-lg font-bold text-black truncate">
           {data.title}
         </div>
-        <div className="text-sm text-deep-grey">{data.date}</div>
+        <div className="text-sm text-deep-gray">{data.date}</div>
         <div className="relative font-bold text-xs text-light-black mt-7">
           {data.source}
         </div>

@@ -39,15 +39,15 @@ const HistoryCard = ({ data, idx }: HistoryCardProps) => {
           <div className="text-xl font-bold text-black flex justify-start">
             {data.date}
           </div>
-          <div className="text-sm font-medium text-deep-grey relative top-[-5px] flex justify-start">
+          <div className="text-sm font-medium text-deep-gray relative top-[-5px] flex justify-start">
             {data.time}
           </div>
         </div>
         <div className="flex-[0.1] flex justify-center items-center duration-300 transition">
           {isExpanded ? (
-            <MdOutlineExpandLess className="text-2xl flex relative top-[-5px] text-deep-grey duration-300 transition"  />
+            <MdOutlineExpandLess className="text-2xl flex relative top-[-5px] text-deep-gray duration-300 transition"  />
           ) : (
-            <MdOutlineExpandLess className="text-2xl flex relative top-[-5px] rotate-180 text-deep-grey duration-300 transition " />
+            <MdOutlineExpandLess className="text-2xl flex relative top-[-5px] rotate-180 text-deep-gray duration-300 transition " />
           )}
         </div>
       </button>
@@ -65,7 +65,7 @@ const HistoryCard = ({ data, idx }: HistoryCardProps) => {
           />
         ) : (
           <div className="w-full h-50 bg-grey rounded-lg mt-2 flex justify-center items-center">
-            <FaTree className="w-8 h-8 text-deep-grey" />
+            <FaTree className="w-8 h-8 text-deep-gray" />
           </div>
         )}
 
@@ -98,7 +98,7 @@ const HistoryCard = ({ data, idx }: HistoryCardProps) => {
             />
           ) : ( */}
             <div className="w-25 h-full bg-grey rounded-md flex justify-around items-center">
-              <FaTree className="w-5 h-5 text-deep-grey " />
+              <FaTree className="w-5 h-5 text-deep-gray " />
             </div>
           {/* )} */}
 

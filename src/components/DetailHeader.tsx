@@ -12,7 +12,7 @@ const DetailHeader = ( {data} : DetailHeaderProps ) => {
             <div className="text-3xl font-bold">{data.title}</div>
             <div className="font-bold text-sm text-light-black relative top-4">{data.status}</div>
           </div>
-          <div className="mt-2 text-deep-grey font-light">최초 등재 : {data.firstListedData}</div>
+          <div className="mt-2 text-deep-gray font-light">최초 등재 : {data.firstListedData}</div>
         </div>
       )
 }

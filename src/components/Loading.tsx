@@ -5,7 +5,7 @@ const Loading = () => {
       <div role="status">
         <svg
           aria-hidden="true"
-          className="w-8 h-8 animate-spin text-white-grey dark:text-deep-grey fill-primary my-3 mt-10"
+          className="w-8 h-8 animate-spin text-white-gray dark:text-deep-gray fill-primary my-3 mt-10"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ const Loading = () => {
         </svg>
         <span className="sr-only">Loading...</span>
       </div>
-      {/* <div className="font-semibold text-deep-grey">데이터를 불러오는 중입니다</div> */}
+      {/* <div className="font-semibold text-deep-gray">데이터를 불러오는 중입니다</div> */}
     </div>
   );
 };

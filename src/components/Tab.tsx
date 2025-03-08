@@ -42,7 +42,7 @@ import { useState } from "react";
                 key={element.id}
                 onClick={() => handleClick(element.id)}
                 className={`cursor-pointer ${
-                  activeTab === element.id ? "text-black" : "text-deep-grey"
+                  activeTab === element.id ? "text-black" : "text-deep-gray"
                 }`}
               >
                 {element.title}

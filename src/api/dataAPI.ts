@@ -11,7 +11,7 @@ export const getDetailData = async (id : number) => {
     return response.data
 }
 
-export const getHistoryData = async (id : number) => {
-    const response = await api.get<IHistoryData[]>(`/${id}/history`)
+export const getHistoryData = async ({id, page, limit } : {id : number, page : number, limit: number}) => {
+    const response = await api.get<IHistoryData[]>(`/${id}/history?page=${page}&limit=${limit}`)
     return response.data
 }
